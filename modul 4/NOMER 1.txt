@@ -1,0 +1,103 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posttest</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script src="hitung.js"></script>
+</head>
+<body>
+    <form name="form1" method="get">
+    <table border="1">
+        <tr>
+            <th colspan="2"><b>PERHITUNGAN</b></th>
+        </tr>
+        <tr>
+            <td>Golongan</td>
+            <td>
+                <select name="gol">
+                    <option value="-">Pilih Golongan</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Jumlah anak</td>
+            <td><input type="text" name="anak" size="10" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="button" name="hitung" value="Hitung" onClick="hit()">
+            <input type="reset" name="Batal" value="Cancel">
+        </td>
+        </tr>
+        <tr>
+            <td>Gaji pokok</td>
+            <td>
+                <input type="text" name="gapok">
+            </td>
+        </tr>
+        <tr>
+            <td>tunjangan</td>
+            <td>
+                <input type="text" name="tunjangan">
+            </td>
+        </tr>
+        <tr>
+            <td>gaji bersih</td>
+            <td><input type="text" name="gaji"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+
+
+JAVASCRIPT
+function hit() {
+    var golongan = document.form1.gol.value;
+    var anak = parseInt(document.form1.anak.value);
+
+    var gapok = 0;
+    var tunjangan = 0;
+    var gajibersih = 0;
+
+    if (isNaN(anak) || anak < 0) {
+        alert("Jumlah anak harus berupa angka yang valid");
+        return;
+    }
+
+    if(golongan == "I"){
+        gapok = 250000;
+        tunjangan = (anak * gapok) * 0.5
+    }
+    else if(golongan == "II"){
+        gapok = 300000;
+        tunjangan = (anak * gapok) * 0.10
+    }
+    else if(golongan == "III"){
+        gapok = 350000;
+        tunjangan = (anak * gapok) * 0.15
+    }
+    else{
+        alert("pilihan tidak valid!");
+        return;
+    }
+
+    gajibersih = gapok + tunjangan;
+
+    document.form1.gapok.value = gapok;
+    document.form1.tunjangan.value = tunjangan;
+    document.form1.gaji.value = gajibersih;
+}

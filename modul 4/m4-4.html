@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript kotak dialog</title>
+    <script>
+        function pesan(){
+            alert("pemrograman web 1");
+        }
+        function cekstatus(){
+            const hasil = confirm("aapakah anda mahasiswa universitas kuningan?");
+            if (hasil) {
+                console.log("silahkan mengakses materi yang telah disediakan");
+            }
+            else{
+                console.log("anda tidak berhak mengakses!");
+            }
+        }
+        function input(){
+            const userinput =  prompt("masukan nama anda: ");
+            if (userinput !== null){
+                console.log("Nama pengguna adalah: " + userinput);
+            } else {
+                console.log("pengguna membatalkan input.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <button onclick = "pesan()">pesan</button>
+    <button onclick = "cekstatus()">Konfirmasi</button>
+    <button onclick = "input()">Masukan</button>
+</body>
+</html>

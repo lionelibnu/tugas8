@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Hotel</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Header */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align:left;
+        font-size: 24px;
+      }
+      /* Navigation/Menu */
+      nav {
+        background-color: #444;
+        color: #fff;
+        overflow: hidden;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        float: left;
+        position: relative;
+      }
+      nav ul li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      nav ul li:hover > a {
+        background-color: #555;
+      }
+      nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: #555;
+        min-width: 200px;
+        z-index: 1;
+      }
+      nav ul li:hover ul {
+        display: block;
+      }
+      nav ul li ul li {
+        float: none;
+      }
+      nav ul li ul li a {
+        padding: 10px;
+      }
+      /* Layout */
+      .container {
+        display: flex;
+        padding: 20px;
+      }
+      .leftbar,
+      .content {
+        padding: 10px;
+      }
+      .leftbar {
+        width: 25%;
+      }
+      /* Dropdown */
+      .dropdown{
+        position: relative;
+      }
+      .dropdown-content {
+        position: relative;
+    }
+      .content {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .content img {
+        width: 32%;
+        height: auto;
+      }
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>HOMESTAY SINDANGAGUNG</header>
+
+    <!-- Navigation/Menu -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Kamar</a></li>
+        <li>
+          <a href="#">Fasilitas</a>
+          <ul class="dropdown">
+            <li><a href="#">Petualangan Alam</a></li>
+            <li>
+              <a href="#">Kolam Renang</a>
+              </li>
+          </ul>
+            </li>
+            <li><a href="#">Pusat Kebugaran</a></li>
+        </li>
+        <li><a href="#">Pesan Sekarang</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Leftbar (Video) -->
+      <div class="leftbar">
+        <iframe 
+        width="100%" 
+        height="150" 
+        src="https://www.youtube.com/embed/DsL31czd61A?si=uQft_2NKbgBxDtSP"
+        frameborder="0" 
+        allowfullscreen></iframe>
+        <iframe
+          width="100%"
+          height="150"
+          src="https://www.youtube.com/embed/FayraidhiUA?si=EdsU0GsnGYwNYuy-"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="100%"
+          height="150"
+          src="https://www.youtube.com/embed/3woc5hnvTMI?si=AjIA1--Czvzz4TJT"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+     
+      <!-- Konten (Foto Kamar) -->
+      <div class="content">
+        <img src="hotel1.jpg" alt="Kamar 1" />
+        <img src="hotel2.jpg" alt="Kamar 2" />
+        <img src="hotel.jpg" alt="Kamar 3" />
+        <img src="hotel4.jpg" alt="Kamar 4" />
+        <img src="hotel3.jpg" alt="Kamar 5" />
+        <img src="hotel11.jpg" alt="Kamar 6" />
+        <img src="hotel111.jpg" alt="Kamar 7" />
+        <img src="hotel1111.jpg" alt="Kamar 8" />
+        <img src="hotel5.jpg" alt="Kamar 9" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>© 2024 Sindangagun Regency</footer>
+  </body>
+</html>

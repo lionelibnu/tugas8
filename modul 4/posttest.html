@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posttest</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script src="hitung.js"></script>
+</head>
+<body>
+    <form name="form1" method="get">
+    <table border="1">
+        <tr>
+            <th colspan="2"><b>PERHITUNGAN</b></th>
+        </tr>
+        <tr>
+            <td>Golongan</td>
+            <td>
+                <select name="gol">
+                    <option value="-">Pilih Golongan</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Jumlah anak</td>
+            <td><input type="text" name="anak" size="10" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="button" name="hitung" value="Hitung" onClick="hit()">
+            <input type="reset" name="Batal" value="Cancel">
+        </td>
+        </tr>
+        <tr>
+            <td>Gaji pokok</td>
+            <td>
+                <input type="text" name="gapok">
+            </td>
+        </tr>
+        <tr>
+            <td>tunjangan</td>
+            <td>
+                <input type="text" name="tunjangan">
+            </td>
+        </tr>
+        <tr>
+            <td>gaji bersih</td>
+            <td><input type="text" name="gaji"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

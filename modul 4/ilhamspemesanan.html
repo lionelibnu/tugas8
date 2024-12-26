@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: auto;
+            background-color: #f0f2f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .pesan {
+            display :flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .pesan label {
+            width: 150px; 
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 350px;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .durasi {
+            display: flex;
+            align-items: center;
+        }
+        .durasi input[type="number"] {
+            width: 50px;
+            margin-right: 5px;
+        }
+        .tombol {
+            display: flex;
+            justify-content: space-between;
+        }
+        .tombol button  {
+            width: 15%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .simpan {
+            background-color: #4a93e1;
+            margin-left: 100px;
+        }
+        .batal {
+            background-color: #ffc107;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Form Pemesanan</h1>
+    <div class="pesan">
+                <label for="ID_pemesanan">ID Pemesanan : </label>
+                <input type="number" id="ID_pemesanan" name="ID_pemesanan" min="1" required />
+            </div>
+            <div class="pesan">
+                <label for="nama_pemesan">Nama Pemesan : </label>
+                <input type="text" id="nama_pemesan"  required />
+            </div>
+            <div class="pesan">
+                    <label for="no_identitas">Nomor Identitas : </label>
+                    <input type="text" id="no_identitas" name="no_identitas" min="0" required />
+                </div>
+                <div class="pesan">
+                    <label for="tipe_kamar">Tipe Kamar : </label>
+                    <select name="std">
+                    <option value="-">--pilih--</option>
+                    <option value="stdrt">STANDART</option>
+                    <option value="dlx">DELUXE</option>
+                    <option value="fmly">FAMILY</option>
+                    </select>
+                </div>  
+                <div class="pesan">
+                        <label for="harga">Harga : </label>
+                        <input type="text" id="harga" name="harga" required />
+                    </div>
+                    <div class="pesan">
+                        <label for="tgl">Tanggal Pesan : </label>
+                        <input type="date" id="tgl"/>
+                    </div>
+                    <div class="pesan">
+                        <label for="durasi">Durasi Menginap : </label>
+                        <div class="durasi">
+                        <input type="number" id="durasi" name="durasi" min="1">Hari
+                    </div>
+                    </div>
+                    <div class="pesan">
+                        <label for="brkfst">Termasuk Breakfast : </label>
+                        <input type="checkbox" id="brkfst" checked> Ya
+                    </div>
+                    <div class="pesan">
+                    <label for="total">Total Bayar : </label>
+                    <input type="text" id="total" required/>
+                </div>
+    </form>
+    <div class="tombol">
+        <button class="simpan">Simpan</button>
+        <button class="batal">Batal</button>
+
+    </div>
+</div>
+<script src="formpesan.js"></script>
+</body>
+</html>

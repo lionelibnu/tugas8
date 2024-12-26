@@ -1,0 +1,51 @@
+ <div class="container">
+    <h1>Form Pemesanan</h1>
+    <div class="pesan">
+                <label for="ID_pemesanan">ID Pemesanan : </label>
+                <input type="number" id="ID_pemesanan" name="ID_pemesanan" min="1" required />
+            </div>
+            <div class="pesan">
+                <label for="nama_pemesan">Nama Pemesan : </label>
+                <input type="text" id="nama_pemesan"  required />
+            </div>
+            <div class="pesan">
+                    <label for="no_identitas">Nomor Identitas : </label>
+                    <input type="number" id="no_identitas" name="no_identitas" min="0" required />
+                </div>
+                <div class="pesan">
+                    <label for="tipe_kamar">Tipe Kamar : </label>
+                    <select name="std">
+                    <option value="-">--pilih--</option>
+                    <option value="stdrt">STANDART</option>
+                    <option value="dlx">DELUXE</option>
+                    <option value="fmly">FAMILY</option>
+                    </select>
+                </div>  
+                <div class="pesan">
+                        <label for="harga">Harga : </label>
+                        <input type="text" id="harga" name="harga" required />
+                    </div>
+                    <div>
+                        <label for="tgl">Tanggal Pesan : </label>
+                        <input type="date" id="tgl"/>
+                    </div>
+                    <div class="pesan">
+                        <label for="durasi">Durasi Menginap : </label>
+                        <div class="durasi">
+                        <input type="number" id="no_identitas" name="no_identitas" min="1">Hari
+                    </div>
+                    </div>
+                    <div class="pesan">
+                        <label for="brkfst">Termasuk Breakfast : </label>
+                        <input type="checkbox" id="brkfst" checked> Ya
+                    </div>
+                    <div class="pesan">
+                    <label for="total">Total Bayar : </label>
+                    <input type="text" id="total" required/>
+                </div>
+    </form>
+    <div class="tombol">
+        <button class="simpan">Simpan</button>
+        <button class="batal">Batal</button>
+
+    </div>

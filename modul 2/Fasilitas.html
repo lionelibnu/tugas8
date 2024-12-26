@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitasr</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 500vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+        }
+        .container{
+            background-color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .kmr{
+            margin-bottom: 20px;
+        }
+        label {
+            display: flexbox;
+            margin-bottom: 5px;
+            font-weight: 100;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .tombol {
+            margin: 25px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .tombol button {
+            width: 25%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .save {
+            background-color: #007bff;
+        }
+        .cancel {
+            background-color: #ffc107;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fasilitas</h1>
+        <form id="tambahFasilitasForm" onsubmit="return validateTambahFasilitas(event)">
+        <div class="kmr">
+                    <label for="ID_kamar">ID : </label>
+                    <input type="number" id="ID_kamar" name="ID_kamar" min="1" required />
+                </div>
+                <div class="kmr">
+                    <label for="namaa"> Nama : </label>
+                    <input type="text" id="namaa" name="namaa" required/>
+                </div>  
+                <div class="kmr">
+                    <label for="fslts">Fasilitas : </label>
+                    <input type="radio" id="Y" name="Y" value="Ya" > Ya
+                    <input type="radio" id="T" name="T" value="T" > Tidak
+                </div>
+                <div>
+                            <label for="weekend">Harga Weekend : </label>
+                            <input type="text" id="weekend" name="weekend" required />
+                            <label for="weekday">Harga weekday : </label>
+                            <input type="text" id="weekday" name="weekday" required />
+                        </div>
+                        <div class="kmr">
+                            <label for="Kuota">Kuota : </label>
+                            <input type="number" id="Kuota" name="Kuota" min="1" required />
+                        </div>
+                        <div>
+                            <label for="buka">Jam buka : </label>
+                            <input type="text" id="buka" name="buka" required />
+                            <label for="tutup">Jam tutup : </label>
+                            <input type="text" id="tutup" name="tutup" required />
+                        </div>
+
+        <div class="tombol">
+            <button type="submit" class="save">Simpan</button>
+            <button type="reset" class="cancel">Batal</button>
+    
+        </div>
+    </form>
+    </div>
+    <script src="fasilotasvalidasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data kamar</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+        }
+        .container{
+            background-color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .kmr{
+            margin-bottom: 20px;
+        }
+        label {
+            display: flexbox;
+            margin-bottom: 5px;
+            font-weight: 100;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .tombol {
+            margin: 25px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .tombol button {
+            width: 25%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .save {
+            background-color: #007bff;
+        }
+        .cancel {
+            background-color: #ffc107;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Kamar</h1>
+        <form id="tambahdata" onsubmit="return validatetambahdata(event)">
+        <div class="kmr">
+                    <label for="ID_kamar">ID Kamar : </label>
+                    <input type="number" id="ID_kamar" name="ID_kamar" min="1" required />
+                </div>
+                <div class="kmr">
+                    <label for="cbr">Gambar Ruangan : </label>
+                    <input type="file" id="gbr"  required />
+                </div>
+                    <div class="kmr">
+                        <label for="tipe_kamar">Jenis Kamar : </label>
+                        <select name="std">
+                        <option value="-">--pilih--</option>
+                        <option value="ekn">EKONOMIS</option>
+                        <option value="stdrt">STANDART</option>
+                        <option value="lxr">LUXURY</option>
+                        </select>
+                    </div>  
+                    <div class="kmr">
+                            <label for="harga">Harga : </label>
+                            <input type="text" id="harga" name="harga" required />
+                        </div>
+                        <div class="kmr">
+                            <label for="fslts">Fasilitas : </label>
+                            <input type="radio" id="Y" name="Y" value="Ya" > Ya
+                            <input type="radio" id="T" name="T" value="T" > Tidak
+        </form>
+        <div class="tombol">
+            <button class="save">Simpan</button>
+            <button class="cancel">Batal</button>
+    
+        </div>
+    </form>
+    </div>
+    <script src="kamarvalidasi.js"></script>
+</body>
+</html>

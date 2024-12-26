@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            background-color: white;
+            padding : 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            justify-content: center;
+        }
+        .login {
+            display :flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .login label{
+            width: 100px;
+            font-weight: bold;
+        }
+        input[type="teks"],
+        input[type="password"],
+        select {
+            width: 200px;
+            padding: 5px;
+            margin-top: 5px;
+
+        }
+        .but button{
+            width: 15%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            background-color: black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form name="log" method="post" onsubmit="return validateLogin(event)">
+        <div class="container">
+            <h2>FORM LOGIN</h2>
+            <div class="login">
+                <label for="userlogin">Username : </label>
+                <input type="teks" id="userlogin" name="userlogin" required>
+            </div>
+            <div class="login">
+                <label for="pass">Password : </label>
+                <input type="password" id="pass" name="pass" required>
+            </div>
+            <div class="but">
+                <button name="lojin">Login</button>
+            </div>
+        </div>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>

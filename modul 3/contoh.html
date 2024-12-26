@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Dinamis Tanpa JavaScript</title>
+  <style>
+    /* Styling untuk tampilan */
+    details {
+      margin: 10px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Menyembunyikan konten di dalam details secara default */
+    .dropdown-tambahan {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dropdown Pertama -->
+  <details>
+    <summary>Pilih Opsi</summary>
+    <select id="dropdown-pertama">
+      <option value="">--Pilih--</option>
+      <option value="opsi1">Opsi 1</option>
+      <option value="opsi2">Opsi 2</option>
+    </select>
+
+    <!-- Dropdown Kedua yang muncul ketika dropdown pertama dibuka -->
+    <div class="dropdown-tambahan">
+      <label for="opsi-tambahan">Pilih Opsi Tambahan:</label>
+      <select id="opsi-tambahan">
+        <option value="">--Pilih--</option>
+        <option value="tambahan1">Tambahan 1</option>
+        <option value="tambahan2">Tambahan 2</option>
+      </select>
+    </div>
+  </details>
+
+</body>
+</html>
